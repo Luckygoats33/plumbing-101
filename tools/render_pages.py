@@ -80,20 +80,26 @@ def homepage():
     pills = "\n".join(f'<a class="pill" href="{slug}.html">{esc(name)}</a>' for slug, name, *_ in CITIES)
     body = f"""<main id="main">
   <section class="hero">
-    {hero_svg()}
-    <div class="hero-copy">
-      <p class="hero-kicker fade-1">Lincoln City · Lincoln and Tillamook counties</p>
-      <h1 class="fade-2">Plumbing for coast homes and small businesses</h1>
-      <p class="fade-3">Plumbing 101, LLC has served Lincoln County and Tillamook County since 2020. The company is based in Lincoln City. Call on weekdays from 8:30 a.m. to 3:30 p.m.</p>
-      <div class="hero-actions fade-4">
-        <a class="btn btn-gold" href="contact.html" data-open-estimate="Hero">Request a free estimate</a>
-        <a class="btn btn-outline" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="hero-kicker">Lincoln City</p>
+        <p class="hero-route">Lincoln County and Tillamook County</p>
+        <h1>Always at your service.</h1>
+        <p class="hero-lead">Plumbing 101, LLC has served both counties since 2020. Call on weekdays from 8:30 a.m. to 3:30 p.m.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
+          <a class="btn btn-outline-dark" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
+        </div>
       </div>
+      <figure class="hero-logo">
+        <img src="images/brand-logo.jpg" width="845" height="731" alt="Plumbing 101 logo: a red and blue highway shield with crossed pipe wrenches, over a bridge and water.">
+        <figcaption>The mark published on plumbing101llc.com</figcaption>
+      </figure>
     </div>
   </section>
   <section class="trust-strip" aria-label="Business facts">
     <div class="wrap trust-row">
-      <div class="trust-item"><strong>CCB #232697</strong> Active</div>
+      <div class="trust-item"><a href="{CCB_URL}"><strong>Oregon CCB #232697, Active</strong></a></div>
       <div class="trust-item"><strong>BBB</strong> Accredited, A+</div>
       <div class="trust-item"><strong>Since 2020</strong> both counties</div>
       <div class="trust-item"><strong>Weekdays</strong> 8:30 a.m. to 3:30 p.m.</div>

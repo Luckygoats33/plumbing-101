@@ -106,7 +106,7 @@ def header(depth):
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="{p('index.html')}" aria-label="Plumbing 101, LLC home">
-      <img src="{p('images/logo.svg')}" width="48" height="48" alt="">
+      <img src="{p('images/brand-logo.jpg')}" width="56" height="48" alt="">
       <span><span class="brand-name">Plumbing 101</span><span class="brand-tag">Always at Your Service</span></span>
     </a>
     <nav class="desktop-nav" aria-label="Primary">
@@ -153,7 +153,7 @@ def footer(depth):
     return f"""<footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <a class="brand" href="{p('index.html')}"><img src="{p('images/logo.svg')}" width="48" height="48" alt=""><span><span class="brand-name">Plumbing 101</span><span class="brand-tag">Always at Your Service</span></span></a>
+      <a class="brand" href="{p('index.html')}"><img src="{p('images/brand-logo.jpg')}" width="56" height="48" alt=""><span><span class="brand-name">Plumbing 101</span><span class="brand-tag">Always at Your Service</span></span></a>
       <p>Plumbing 101, LLC serves Lincoln County and Tillamook County from Lincoln City. Weekdays 8:30 a.m. to 3:30 p.m.</p>
       <p><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
@@ -192,9 +192,9 @@ def footer(depth):
     </div>
   </div>
 </footer>
-<div class="sticky-cta" aria-label="Quick contact">
-  <a class="call" href="tel:{PHONE_TEL}">Call</a>
-  <button class="book" type="button" data-open-estimate="Sticky bar">Free estimate</button>
+<div class="sticky-cta" aria-label="Call Plumbing 101">
+  <a class="call" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
+  <button class="book" type="button" data-open-estimate="Sticky bar">Estimate</button>
 </div>
 <a class="btn btn-gold float-estimate" href="{p('contact.html')}" data-open-estimate="Floating button">Free estimate</a>
 <div class="modal" id="estimate-modal" hidden role="dialog" aria-modal="true" aria-labelledby="estimate-title">
@@ -244,11 +244,11 @@ def head(title, desc, canonical_path, depth, schema, robots="index,follow"):
 <meta property="og:type" content="website">
 <meta property="og:url" content="{url}">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#063E48">
-<link rel="icon" href="{p('images/favicon.svg')}" type="image/svg+xml">
+<meta name="theme-color" content="#D42329">
+<link rel="icon" href="{p('images/brand-logo.jpg')}" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=Literata:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{p('styles.css')}">
 <script type="application/ld+json">{schema}</script>
 </head>
@@ -264,7 +264,7 @@ def plumber_schema():
   "url": "https://luckygoats33.github.io/plumbing-101/",
   "telephone": "+1-541-614-1344",
   "email": "office@plumbing101.net",
-  "image": "https://luckygoats33.github.io/plumbing-101/images/logo.svg",
+  "image": "https://luckygoats33.github.io/plumbing-101/images/brand-logo.jpg",
   "address": {"@type": "PostalAddress", "addressLocality": "Lincoln City", "addressRegion": "OR", "addressCountry": "US"},
   "areaServed": [
     {"@type": "AdministrativeArea", "name": "Lincoln County, Oregon"},
