@@ -73,23 +73,46 @@ def city_body(slug, name, county, setting, housing, notes):
 
 
 def homepage():
-    cards = "\n".join(
-        f'''<article class="card reveal stagger-{(i % 4) + 1}"><div class="card-art">{icon(kind)}</div><div class="card-body"><h3>{esc(name)}</h3><p>{esc(blurb)}</p><a class="more" href="services/{slug}.html">Learn more <span aria-hidden="true">&rarr;</span></a></div></article>'''
-        for i, (slug, name, blurb, kind) in enumerate(SERVICES)
-    )
+    samples = {
+        "water-heaters": ("images/placeholder/sample-heater.webp", 900, 675, "Sample photo of the top of a residential gas water heater. Not a Plumbing 101 installation."),
+        "repiping": ("images/placeholder/sample-pipes.webp", 900, 601, "Sample photo of copper pipes passing through a floor. Not a Plumbing 101 job."),
+        "faucet-repair": ("images/placeholder/sample-faucet.webp", 900, 675, "Sample photo of a dripping bathroom faucet. Not a Plumbing 101 job."),
+        "residential-plumbing": ("images/placeholder/sample-technician.webp", 900, 734, "Sample photo of a person working on a water heater. Not a Plumbing 101 employee."),
+    }
+    bits = []
+    for i, (slug, name, blurb, kind) in enumerate(SERVICES):
+        if slug in samples:
+            src, w, h, alt = samples[slug]
+            art = f'''<!-- PLACEHOLDER: swap for real Plumbing 101 photo --><figure class="shot is-sample"><img src="{src}" width="{w}" height="{h}" alt="{esc(alt)}" loading="lazy" decoding="async"><span class="sample-tag">Sample photo</span></figure>'''
+            klass = "card has-photo"
+        else:
+            art = f'<div class="card-art">{icon(kind)}</div>'
+            klass = "card"
+        bits.append(f'''<article class="{klass} reveal stagger-{(i % 4) + 1}">{art}<div class="card-body"><h3>{esc(name)}</h3><p>{esc(blurb)}</p><a class="more" href="services/{slug}.html">Learn more <span aria-hidden="true">&rarr;</span></a></div></article>''')
+    cards = "\n".join(bits)
     pills = "\n".join(f'<a class="pill" href="{slug}.html">{esc(name)}</a>' for slug, name, *_ in CITIES)
     body = f"""<main id="main">
   <section class="hero">
-    <div class="hero-scene" aria-hidden="true">{BRIDGE}</div>
-    <div class="wrap hero-copy">
-      <p class="sign-route">{SHIELD}<span>Highway 101</span></p>
-      <h1>Plumbing for houses on the coast</h1>
-      <p class="hero-lead">Lincoln City, Depoe Bay, Newport, Waldport, Yachats, Tillamook, Pacific City, and Neskowin. Plumbing 101, LLC serves Lincoln County and Tillamook County.</p>
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
-        <a class="btn btn-outline" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
+    <img class="hero-photo" src="images/placeholder/hero-1600.webp" srcset="images/placeholder/hero-800.webp 800w, images/placeholder/hero-1600.webp 1600w" sizes="100vw" width="1600" height="790" alt="The Yaquina Bay Bridge in Newport, Oregon, at sunrise." fetchpriority="high" decoding="async">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="sign-route">{SHIELD}<span>Highway 101</span></p>
+        <h1>Your Oregon Coast plumber, from Lincoln City to Tillamook</h1>
+        <p class="hero-lead">Depoe Bay, Newport, Waldport, Yachats, Pacific City, and Neskowin sit in the same two counties. Plumbing 101, LLC is based in Lincoln City.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
+          <a class="btn btn-outline" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
+        </div>
+        <p class="microline">Call now. Weekdays 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday.</p>
       </div>
-      <p class="microline">Call now. Weekdays 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday.</p>
+      <aside class="glass-card">
+        <p class="glass-label">Call the office</p>
+        <a class="glass-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
+        <p>Monday to Friday, 8:30 a.m. to 3:30 p.m.</p>
+        <p><a href="{CCB_URL}">Oregon CCB #232697, Active</a></p>
+        <p>BBB Accredited, A+</p>
+      </aside>
     </div>
     <div class="hero-waves" aria-hidden="true">{WAVES}</div>
   </section>
@@ -111,6 +134,10 @@ def homepage():
       <div class="cards">{cards}</div>
     </div>
   </section>
+  <figure class="image-band">
+    <img src="images/placeholder/lincoln-city-beach.webp" width="1400" height="934" alt="The beach at Lincoln City, Oregon, with wet sand, driftwood, and the Pacific under a cloudy sky." loading="lazy" decoding="async">
+    <figcaption>Lincoln City beach. Photo by Rick Obst, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons.</figcaption>
+  </figure>
   <section class="section why">
     <div class="wrap">
       <p class="eyebrow">Why call</p>
@@ -148,11 +175,18 @@ def homepage():
         </div>
         <p><a class="btn btn-outline-dark" href="about.html">About the company</a></p>
       </div>
+      <div>
+      <!-- PLACEHOLDER: swap for real Plumbing 101 photo -->
+      <figure class="shot is-sample about-shot">
+        <img src="images/placeholder/sample-technician.webp" width="900" height="734" alt="Sample photo of a person using wrenches on a water heater. Not a Plumbing 101 employee." loading="lazy" decoding="async">
+        <span class="sample-tag">Sample photo</span>
+      </figure>
       <div class="panel">
         <h3>Talk to a person</h3>
         <p><a class="phone-link" href="tel:{PHONE_TEL}">{PHONE_DISP}</a></p>
         <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
         <p>Monday to Friday, 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -217,7 +251,8 @@ def homepage():
   </section>
 </main>"""
     schema = plumber_schema()
-    doc = head("Plumbing 101, LLC | Lincoln City plumber", "Plumbing 101, LLC serves Lincoln and Tillamook counties from Lincoln City. CCB #232697. Call (541) 614-1344, weekdays 8:30 a.m. to 3:30 p.m.", "index.html", 0, schema)
+    preload = '<link rel="preload" as="image" href="images/placeholder/hero-1600.webp" imagesrcset="images/placeholder/hero-800.webp 800w, images/placeholder/hero-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">'
+    doc = head("Plumbing 101, LLC | Lincoln City plumber", "Plumbing 101, LLC serves Lincoln and Tillamook counties from Lincoln City. CCB #232697. Call (541) 614-1344, weekdays 8:30 a.m. to 3:30 p.m.", "index.html", 0, schema, extra=preload)
     return doc + header(0) + body + footer(0) + "</body></html>\n"
 
 

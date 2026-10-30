@@ -260,7 +260,7 @@ def form(source):
     </form>"""
 
 
-def head(title, desc, canonical_path, depth, schema, robots="index,follow"):
+def head(title, desc, canonical_path, depth, schema, robots="index,follow", extra=""):
     p = lambda path: rel(depth, path)
     url = BASE + canonical_path
     return f"""<!DOCTYPE html>
@@ -283,6 +283,7 @@ def head(title, desc, canonical_path, depth, schema, robots="index,follow"):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{p('styles.css')}">
+{extra}
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>"""
