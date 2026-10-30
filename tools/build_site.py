@@ -23,19 +23,28 @@ SHIELD = """<svg class="shield" viewBox="0 0 88 102" aria-hidden="true">
   <text x="44" y="66" text-anchor="middle" fill="#141820" font-family="Overpass,sans-serif" font-size="28" font-weight="800">101</text>
 </svg>"""
 
-BRIDGE = """<svg class="bridge-art" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Simple arch in the shape of the Yaquina Bay Bridge">
-  <path fill="#7E8C98" d="M40 168h1120v16H40z"/>
-  <path fill="#5C6A76" d="M40 150h300v28H40zM860 150h300v28H860z"/>
-  <path fill="none" stroke="#3E4C58" stroke-width="14" d="M330 168 Q600 18 870 168"/>
-  <path stroke="#3E4C58" stroke-width="3" d="M390 168 V108 M450 168 V72 M510 168 V46 M570 168 V32 M630 168 V32 M690 168 V46 M750 168 V72 M810 168 V108"/>
-  <rect x="318" y="132" width="16" height="48" fill="#3E4C58"/>
-  <rect x="866" y="132" width="16" height="48" fill="#3E4C58"/>
+BRIDGE = """<svg class="bridge-art" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Arch bridge silhouette with truss lines, in the shape of the Yaquina Bay Bridge">
+  <path fill="#24356E" opacity=".55" d="M0 250 L160 190 L300 230 L520 140 L760 210 L980 120 L1200 200 L1440 150 V460 H0 Z"/>
+  <path fill="#1A274F" d="M0 318 h1440 v18 H0z"/>
+  <path fill="#31457A" d="M0 300 h390 v28 H0z M1050 300 h390 v28 H1050z"/>
+  <path fill="none" stroke="#E7EEF6" stroke-width="16" d="M400 318 Q720 36 1040 318"/>
+  <path fill="none" stroke="#E7EEF6" stroke-width="5" d="M455 318 Q720 92 985 318"/>
+  <path fill="none" stroke="#E7EEF6" stroke-width="2.2" d="M480 270 L530 214 L580 270 L630 190 L680 250 L720 160 L760 250 L810 190 L860 270 L910 214 L960 270"/>
+  <g stroke="#E7EEF6" stroke-width="2.4">
+    <path d="M500 318 V214 M560 318 V168 M620 318 V128 M680 318 V96 M760 318 V96 M820 318 V128 M880 318 V168 M940 318 V214"/>
+  </g>
+  <rect x="388" y="268" width="18" height="58" fill="#E7EEF6"/>
+  <rect x="1034" y="268" width="18" height="58" fill="#E7EEF6"/>
+  <g fill="#E7EEF6" opacity=".8">
+    <rect x="70" y="292" width="10" height="34"/><rect x="160" y="292" width="10" height="34"/><rect x="250" y="292" width="10" height="34"/>
+    <rect x="1180" y="292" width="10" height="34"/><rect x="1270" y="292" width="10" height="34"/><rect x="1360" y="292" width="10" height="34"/>
+  </g>
 </svg>"""
 
 WAVES = """<svg class="wave-art" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
   <path fill="#2A418D" fill-opacity=".22" d="M0 30c70 18 110-18 180 0s110 18 180 0 110-18 180 0 110 18 180 0 110-18 180 0 110 18 180 0 110-18 120 0V70H0z"/>
   <path fill="#2A418D" fill-opacity=".4" d="M0 44c80 14 100-14 180 0s100 14 180 0 100-14 180 0 100 14 180 0 100-14 180 0 100 14 180 0 100-14 120 0V70H0z"/>
-  <path fill="#E7E1D4" d="M0 56c90 10 90-10 180 0s90 10 180 0 90-10 180 0 90 10 180 0 90-10 180 0 90 10 180 0 90-10 120 0V70H0z"/>
+  <path fill="#121A3D" d="M0 56c90 10 90-10 180 0s90 10 180 0 90-10 180 0 90 10 180 0 90-10 180 0 90 10 180 0 90-10 120 0V70H0z"/>
 </svg>"""
 
 SERVICES = [
@@ -97,21 +106,21 @@ def rel(depth, path):
 
 def icon(kind):
     common = {
-        "home": '<path d="M16 28L32 14l16 14v18H36V34h-8v12H16V28z" fill="#F0A552"/>',
-        "shop": '<path d="M14 28h36v16H14z" fill="#F5F8FA"/><path d="M12 28l4-10h32l4 10" fill="#F0A552"/>',
-        "build": '<path d="M18 44V24l14-8 14 8v20" fill="none" stroke="#F0A552" stroke-width="3"/><path d="M28 44V32h8v12" fill="#F5F8FA"/>',
-        "remodel": '<path d="M16 40h32v6H16zM20 22h8v18h-8zM34 28h10v12H34z" fill="#F0A552"/>',
-        "bath": '<path d="M16 30h32v8H16z" fill="#F5F8FA"/><path d="M20 30V20a6 6 0 0 1 12 0" fill="none" stroke="#F0A552" stroke-width="3"/>',
-        "kitchen": '<path d="M18 18h28v22H18z" fill="#F5F8FA"/><path d="M24 18v-4h6M34 40v6M28 40v6" stroke="#F0A552" stroke-width="3"/>',
-        "pipe": '<path d="M14 26h16v8H14zM30 22h8v20h-8zM38 34h12v8H38z" fill="#F0A552"/>',
-        "drain": '<circle cx="32" cy="30" r="10" fill="none" stroke="#F5F8FA" stroke-width="3"/><path d="M32 40v10" stroke="#F0A552" stroke-width="4"/>',
-        "toilet": '<path d="M24 16h16v8H24zM20 26h24c0 12-4 18-12 18S20 38 20 26z" fill="#F5F8FA"/>',
-        "faucet": '<path d="M20 22h24v6H20zM30 28h4v16h-4zM22 44h20" stroke="#F0A552" stroke-width="3" fill="none"/>',
-        "heater": '<rect x="22" y="14" width="20" height="32" rx="8" fill="#F5F8FA"/><path d="M28 22h8M28 28h8M28 34h8" stroke="#E8913A" stroke-width="2"/>',
-        "inspect": '<circle cx="28" cy="28" r="10" fill="none" stroke="#F0A552" stroke-width="3"/><path d="M36 36l10 10" stroke="#F5F8FA" stroke-width="4"/>',
+        "home": '<path d="M12 30 L32 14 L52 30 V50 H40 V36 H24 V50 H12 Z"/>',
+        "shop": '<path d="M14 26 H50 L46 16 H18 Z M16 26 V48 H48 V26"/>',
+        "build": '<path d="M18 46 V28 L32 18 L46 28 V46 M26 46 V34 H38 V46"/>',
+        "remodel": '<path d="M16 40 H48 M22 40 V22 H32 V40 M36 40 V28 H46 V40"/>',
+        "bath": '<path d="M16 32 H48 V40 H16 Z M22 32 V22 a8 8 0 0 1 16 0"/>',
+        "kitchen": '<path d="M18 18 H46 V42 H18 Z M24 18 V14 H30 M34 42 V50 M28 42 V50"/>',
+        "pipe": '<path d="M14 26 H30 V34 H14 Z M26 22 H36 V46 H26 Z M36 34 H52 V42 H36 Z"/>',
+        "drain": '<circle cx="32" cy="28" r="10"/><path d="M32 38 V52"/>',
+        "toilet": '<path d="M24 16 H40 V24 H24 Z M22 26 H42 C42 42 38 50 32 50 S22 42 22 26 Z"/>',
+        "faucet": '<path d="M18 22 H46 V30 H18 Z M30 30 V48 M20 48 H44"/>',
+        "heater": '<rect x="22" y="12" width="20" height="36" rx="8"/><path d="M28 22 H36 M28 30 H36 M28 38 H36"/>',
+        "inspect": '<circle cx="28" cy="28" r="12"/><path d="M37 37 L50 50"/>',
     }
     inner = common.get(kind, common["pipe"])
-    return f'<svg viewBox="0 0 64 64" aria-hidden="true">{inner}</svg>'
+    return f'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">{inner}</svg>'
 
 
 def services_links(depth):
@@ -127,7 +136,7 @@ def header(depth):
     return f"""<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="{p('index.html')}" aria-label="Plumbing 101, LLC home">
+    <a class="brand" href="{p('index.html')}">
       {SHIELD}
       <span><span class="brand-name">Plumbing 101</span><span class="brand-tag">Always at Your Service</span></span>
     </a>
@@ -142,6 +151,7 @@ def header(depth):
       <a href="{p('faq.html')}">FAQ</a>
       <a href="{p('blog/index.html')}">Guides</a>
       <a href="{p('contact.html')}">Contact</a>
+      <a class="nav-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
       <a class="btn btn-gold" href="{p('contact.html')}" data-open-estimate="Nav">Free estimate</a>
     </nav>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
@@ -271,7 +281,7 @@ def head(title, desc, canonical_path, depth, schema, robots="index,follow"):
 <link rel="icon" href="{p('images/favicon.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{p('styles.css')}">
 <script type="application/ld+json">{schema}</script>
 </head>
