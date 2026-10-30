@@ -80,23 +80,18 @@ def homepage():
     pills = "\n".join(f'<a class="pill" href="{slug}.html">{esc(name)}</a>' for slug, name, *_ in CITIES)
     body = f"""<main id="main">
   <section class="hero">
-    <div class="hero-sky">
-      {BRIDGE}
-      <div class="road-sign">
-        <div class="sign-top">
-          {SHIELD}
-          <p class="sign-route">Highway 101</p>
-        </div>
-        <h1>Plumbing along the Oregon Coast</h1>
-        <p class="town-line">Lincoln City, Depoe Bay, Newport, Waldport, Yachats, Tillamook, Pacific City, Neskowin.</p>
-        <p class="hero-lead">Plumbing 101, LLC serves Lincoln County and Tillamook County from Lincoln City. Weekdays, 8:30 a.m. to 3:30 p.m.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
-          <a class="btn btn-outline-dark" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
-        </div>
+    <div class="hero-scene" aria-hidden="true">{BRIDGE}</div>
+    <div class="wrap hero-copy">
+      <p class="sign-route">{SHIELD}<span>Highway 101</span></p>
+      <h1>Plumbing for houses on the coast</h1>
+      <p class="hero-lead">Lincoln City, Depoe Bay, Newport, Waldport, Yachats, Tillamook, Pacific City, and Neskowin. Plumbing 101, LLC serves Lincoln County and Tillamook County.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
+        <a class="btn btn-outline" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
       </div>
-      {WAVES}
+      <p class="microline">Call now. Weekdays 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday.</p>
     </div>
+    <div class="hero-waves" aria-hidden="true">{WAVES}</div>
   </section>
   <section class="trust-strip" aria-label="Business facts">
     <div class="wrap trust-row">
@@ -161,19 +156,64 @@ def homepage():
       </div>
     </div>
   </section>
-  <section class="section" style="background:#fff">
+  <section class="section steps-section">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps, then the work</h2>
+      <ol class="steps">
+        <li><span class="step-no">1</span><h3>Call or write</h3><p>Phone {PHONE_DISP} or email {EMAIL}, Monday through Friday, 8:30 a.m. to 3:30 p.m.</p></li>
+        <li><span class="step-no">2</span><h3>Describe the place</h3><p>Name the town, what is leaking or not draining, and whether one fixture or the whole house is affected.</p></li>
+        <li><span class="step-no">3</span><h3>Agree the scope</h3><p>Ask for a written estimate before work starts. <a href="{CCB_URL}">Oregon CCB #232697, Active</a>.</p></li>
+      </ol>
+    </div>
+  </section>
+  <section class="section area-section">
     <div class="wrap">
       <p class="eyebrow">Highway 101</p>
       <h2>Lincoln County and Tillamook County</h2>
-      <p class="lede">Town pages cover communities in the two counties the company says it serves, including Lincoln City, Newport, Waldport, Yachats, Tillamook, and Neskowin. Each page is a town in that area, not a separate shop.</p>
+      <p class="lede">These towns sit in the two counties the company says it serves. A town page is not a claim of a separate shop.</p>
+      <div class="route">
+        <svg class="coast-map" viewBox="0 0 220 560" role="img" aria-label="Stylized coast with a route line through Tillamook, Pacific City, Neskowin, Lincoln City, Depoe Bay, Newport, Waldport, and Yachats">
+          <path d="M70 20 C 120 70, 40 120, 90 180 C 140 240, 50 300, 100 370 C 150 440, 60 490, 110 540" fill="none" stroke="#1A5A68" stroke-width="10" stroke-linecap="round"/>
+          <path d="M78 24 C 128 74, 48 124, 98 184 C 148 244, 58 304, 108 374 C 158 444, 68 494, 118 544" fill="none" stroke="#D42329" stroke-width="3" stroke-dasharray="1 10" stroke-linecap="round"/>
+          <g fill="#1B2A5C">
+            <circle cx="86" cy="48" r="6"/><circle cx="70" cy="110" r="6"/><circle cx="96" cy="168" r="6"/><circle cx="78" cy="236" r="6"/>
+            <circle cx="108" cy="300" r="6"/><circle cx="84" cy="370" r="6"/><circle cx="112" cy="450" r="6"/><circle cx="100" cy="520" r="6"/>
+          </g>
+        </svg>
+        <ol class="route-towns">
+          <li><a href="tillamook.html">Tillamook</a><span>Tillamook County</span></li>
+          <li><a href="pacific-city.html">Pacific City</a><span>Tillamook County</span></li>
+          <li><a href="neskowin.html">Neskowin</a><span>Tillamook County</span></li>
+          <li><a href="lincoln-city.html">Lincoln City</a><span>Lincoln County</span></li>
+          <li><a href="depoe-bay.html">Depoe Bay</a><span>Lincoln County</span></li>
+          <li><a href="newport.html">Newport</a><span>Lincoln County</span></li>
+          <li><a href="waldport.html">Waldport</a><span>Lincoln County</span></li>
+          <li><a href="yachats.html">Yachats</a><span>Lincoln County</span></li>
+        </ol>
+      </div>
       <div class="pills">{pills}</div>
     </div>
   </section>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Questions</p>
+      <h2>Before you call</h2>
+      <div class="faq-list">
+        <div class="faq-item"><button type="button" aria-expanded="false">What area do you serve?</button><div class="answer"><p>Lincoln County and Tillamook County, from a base in Lincoln City. Town pages list communities inside those counties.</p></div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">What are the hours?</button><div class="answer"><p>Monday through Friday, 8:30 a.m. to 3:30 p.m. Saturday and Sunday are closed. That schedule matches the company website and the BBB profile.</p></div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">Are you licensed?</button><div class="answer"><p><a href="{CCB_URL}">Oregon CCB #232697, Active</a>. First licensed October 19, 2020.</p></div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">How do I reach you?</button><div class="answer"><p>Call {PHONE_DISP} or email {EMAIL}. The contact form opens an email to that address.</p></div></div>
+      </div>
+    </div>
+  </section>
   <section class="cta-band">
+    <div class="wrap">
     <h2>Call from Lincoln City to Tillamook</h2>
     <p>Phone the Lincoln City office, or send a note to the company email.</p>
     <p><a class="phone-link" href="tel:{PHONE_TEL}">{PHONE_DISP}</a></p>
-    <p><a class="btn btn-white glow" href="contact.html" data-open-estimate="Home CTA">Request a free estimate</a> <a class="btn btn-outline" href="mailto:{EMAIL}">Email the office</a></p>
+    <p><a class="btn btn-white" href="contact.html" data-open-estimate="Home CTA">Request a free estimate</a> <a class="btn btn-outline" href="mailto:{EMAIL}">Email the office</a></p>
+    </div>
   </section>
 </main>"""
     schema = plumber_schema()
