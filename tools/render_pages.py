@@ -2,7 +2,7 @@
 import json
 from build_site import (
     BASE, BBB_URL, CCB_URL, CITIES, COMPANY_SITE, EMAIL, ONECALL, PHONE_DISP, PHONE_TEL,
-    QUOTE, SERVICES, crumbs_schema, esc, footer, form, header, head, hero_svg, icon,
+    QUOTE, SERVICES, SHIELD, BRIDGE, WAVES, crumbs_schema, esc, footer, form, header, head, hero_svg, icon,
     page, plumber_schema, rel, write, ROOT,
 )
 from posts_data import POSTS
@@ -80,21 +80,22 @@ def homepage():
     pills = "\n".join(f'<a class="pill" href="{slug}.html">{esc(name)}</a>' for slug, name, *_ in CITIES)
     body = f"""<main id="main">
   <section class="hero">
-    <div class="hero-layout">
-      <div class="hero-copy">
-        <p class="hero-kicker">Lincoln City</p>
-        <p class="hero-route">Lincoln County and Tillamook County</p>
-        <h1>Always at your service.</h1>
-        <p class="hero-lead">Plumbing 101, LLC has served both counties since 2020. Call on weekdays from 8:30 a.m. to 3:30 p.m.</p>
+    <div class="hero-sky">
+      {BRIDGE}
+      <div class="road-sign">
+        <div class="sign-top">
+          {SHIELD}
+          <p class="sign-route">Highway 101</p>
+        </div>
+        <h1>Plumbing along the Oregon Coast</h1>
+        <p class="town-line">Lincoln City, Depoe Bay, Newport, Waldport, Yachats, Tillamook, Pacific City, Neskowin.</p>
+        <p class="hero-lead">Plumbing 101, LLC serves Lincoln County and Tillamook County from Lincoln City. Weekdays, 8:30 a.m. to 3:30 p.m.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
           <a class="btn btn-outline-dark" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
         </div>
       </div>
-      <figure class="hero-logo">
-        <img src="images/brand-logo.jpg" width="845" height="731" alt="Plumbing 101 logo: a red and blue highway shield with crossed pipe wrenches, over a bridge and water.">
-        <figcaption>The mark published on plumbing101llc.com</figcaption>
-      </figure>
+      {WAVES}
     </div>
   </section>
   <section class="trust-strip" aria-label="Business facts">
@@ -110,8 +111,8 @@ def homepage():
     <div class="orb" aria-hidden="true"></div>
     <div class="wrap">
       <p class="eyebrow">Services</p>
-      <h2>Work named on the public record</h2>
-      <p class="lede">These services come from the company website and its BBB profile. If your job is different, call and ask. The phone number is {PHONE_DISP}.</p>
+      <h2>From Depoe Bay to Pacific City</h2>
+      <p class="lede">These services come from the company website and its BBB profile. The company serves Lincoln County and Tillamook County. Call {PHONE_DISP}.</p>
       <div class="cards">{cards}</div>
     </div>
   </section>
@@ -143,7 +144,7 @@ def homepage():
     <div class="wrap split">
       <div>
         <p class="eyebrow">About</p>
-        <h2>A Lincoln City company, licensed since 2020</h2>
+        <h2>Based in Lincoln City since 2020</h2>
         <p class="lede">Plumbing 101, LLC is an Oregon limited liability company. The BBB profile lists Faith A. Worthington as owner/manager and Michael E. Worthington as owner/member. The company tagline is &ldquo;Always at Your Service.&rdquo;</p>
         <div class="stats">
           <div class="stat"><strong>232697</strong><span>CCB license</span></div>
@@ -162,15 +163,15 @@ def homepage():
   </section>
   <section class="section" style="background:#fff">
     <div class="wrap">
-      <p class="eyebrow">Service area</p>
+      <p class="eyebrow">Highway 101</p>
       <h2>Lincoln County and Tillamook County</h2>
-      <p class="lede">Town pages describe the communities inside the two counties the company says it serves. They are not claims of a separate shop in each town.</p>
+      <p class="lede">Town pages cover communities in the two counties the company says it serves, including Lincoln City, Newport, Waldport, Yachats, Tillamook, and Neskowin. Each page is a town in that area, not a separate shop.</p>
       <div class="pills">{pills}</div>
     </div>
   </section>
   <section class="cta-band">
-    <h2>Request an estimate</h2>
-    <p>Call, or send a note to the company email.</p>
+    <h2>Call from Lincoln City to Tillamook</h2>
+    <p>Phone the Lincoln City office, or send a note to the company email.</p>
     <p><a class="phone-link" href="tel:{PHONE_TEL}">{PHONE_DISP}</a></p>
     <p><a class="btn btn-white glow" href="contact.html" data-open-estimate="Home CTA">Request a free estimate</a> <a class="btn btn-outline" href="mailto:{EMAIL}">Email the office</a></p>
   </section>
