@@ -26,10 +26,7 @@ Every claim on the site comes from a public page. Nothing here is a made-up revi
 | Hours Monday to Friday 8:30 a.m. to 3:30 p.m., Saturday and Sunday closed | https://www.plumbing101llc.com/ and the BBB profile hours table |
 | Water heater installation named as a service | https://www.plumbing101llc.com/about-us |
 | Published testimonial from Andrew Perry about a beach-home re-pipe | https://www.plumbing101llc.com/ |
-| Oregon CCB license 232697, status Active, first licensed October 19, 2020 | https://search.ccb.state.or.us/search/search_result.aspx?id=232697 |
-| Unpaid claims $0.00 and unpaid civil penalties $0.00 | https://search.ccb.state.or.us/search/search_result.aspx?id=232697 |
-| CCB summary: complaints have been filed; no disciplinary sanctions listed; one administrative suspension for lack of proof of liability insurance | https://search.ccb.state.or.us/search/search_result.aspx?id=232697 and https://search.ccb.state.or.us/search/administrative_license_actions.asp?id=232697 |
-| One public complaint, dispute 232697-101, owner claim, small commercial remodel, opened March 23, 2023, closed April 24, 2023, settled by telephone mediation | https://search.ccb.state.or.us/search/dispute_detail.asp?id=232697 |
+| Oregon CCB #232697, Active. First licensed October 19, 2020 | https://search.ccb.state.or.us/search/search_result.aspx?id=232697 |
 | BBB Accredited, A+ rating, accredited since October 31, 2025, file opened November 3, 2025 | https://www.bbb.org/us/or/lincoln-city/profile/plumbing-renovation/plumbing-101-llc-1296-1000189882 |
 | BBB: LLC incorporated August 21, 2020, business started October 19, 2020 | Same BBB profile |
 | Faith A. Worthington, owner/manager, and Michael E. Worthington, owner/member | Same BBB profile |

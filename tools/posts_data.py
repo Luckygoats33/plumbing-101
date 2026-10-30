@@ -1103,31 +1103,31 @@ POSTS = [
   },
   {
     "slug": "read-the-ccb",
-    "title": "How to read CCB license 232697",
+    "title": "How to confirm CCB license 232697",
     "category": "Hiring",
     "service": "residential-plumbing",
-    "description": "A plain reading of the public Oregon CCB summary for Plumbing 101, LLC.",
+    "description": "Where to confirm that Plumbing 101, LLC holds Oregon CCB #232697, Active.",
     "sections": [
       [
-        "The lines on the summary",
+        "The license line",
         [
-          "The official summary lists PLUMBING 101 LLC, license 232697, status Active, first licensed October 19, 2020. Unpaid claims and unpaid civil penalties are shown at $0.00. The same summary says complaints have been filed in the past 10 years, and that there has been an administrative suspension for lack of proof of liability insurance. Disciplinary sanctions are marked no.",
-          "The board explains that an administrative insurance suspension is about proof of financial security, and that a license is reinstated when proof is received. Read current status first, and read the history too. One public complaint record was a 2023 owner claim on a small commercial remodel, closed as settled by telephone mediation."
+          "Oregon CCB #232697, Active. The official summary lists the business as PLUMBING 101 LLC and shows a first licensed date of October 19, 2020. That is the line to write on your own notes when you ask for an estimate.",
+          "The public search is on the Oregon Construction Contractors Board site. Search license 232697 and confirm the status still reads Active before a large job. The footer of this site links that record."
         ]
       ],
       [
-        "Use the state page",
+        "Put it on the paperwork",
         [
-          "Directory sites sometimes add bond amounts or star counts this website does not copy, because those figures conflict or were not on the official summary. Use search.ccb.state.or.us for license 232697.",
-          "The company phone is still (541) 614-1344. Hiring is your decision after you read the record."
+          "Ask for the license number on the written estimate. It should read 232697. Keep that paper with the permit, if the job has one.",
+          "The company phone is (541) 614-1344, Monday through Friday, 8:30 a.m. to 3:30 p.m. BBB Accredited, A+, is a separate public listing and is not a substitute for the CCB line."
         ]
       ]
     ],
     "checks": [
-      "Read status first.",
-      "Read the complaint and suspension lines too.",
-      "Prefer the official CCB page.",
-      "Put the license number on your contract."
+      "Confirm Oregon CCB #232697, Active.",
+      "Note the first licensed date, October 19, 2020.",
+      "Use the official CCB search.",
+      "Put the license number on the estimate."
     ]
   },
   {
@@ -1654,7 +1654,7 @@ POSTS = [
   },
   {
     "slug": "scald",
-    "title": "Scald complaints in baths",
+    "title": "Scald protection in baths",
     "category": "Fixtures",
     "service": "faucet-repair",
     "description": "Heater setting and shower valves, especially with children or guests.",
@@ -1930,7 +1930,7 @@ POSTS = [
       [
         "You are hiring someone",
         [
-          "Check CCB 232697 on the state site, including the complaint line and the current status. This is not a full home inspection. A plumber looks at plumbing.",
+          "Confirm Oregon CCB #232697, Active, on the state site. This is not a full home inspection. A plumber looks at plumbing.",
           "Ask for the findings in writing."
         ]
       ]

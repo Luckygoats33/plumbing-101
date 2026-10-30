@@ -36,7 +36,7 @@ def service_body(slug, name, summary, kind, depth=1):
       <li>Clear a path to the fixture, the crawlspace hatch, or the heater.</li>
     </ul>
     <h2>Hours and license</h2>
-    <p>Hours on this site match the company website and the BBB profile: Monday through Friday, 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday. Oregon CCB license 232697 is listed Active, first licensed October 19, 2020. <a href="{CCB_URL}">Read the public record</a>.</p>
+    <p>Hours on this site match the company website and the BBB profile: Monday through Friday, 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday. <a href="{CCB_URL}">Oregon CCB #232697, Active</a>. First licensed October 19, 2020.</p>
     <p>Related services: {links}</p>
     <div class="pills">{pills}</div>
   </div></section>
@@ -115,7 +115,7 @@ def homepage():
       <h2>Facts you can check</h2>
       <p class="lede">The useful details are public: a license number, a BBB profile, posted hours, and a phone that goes to the company.</p>
       <div class="reasons">
-        <article class="reason reveal"><h3>Active CCB license</h3><p>Oregon CCB #232697 is Active. First licensed October 19, 2020. The public record is the place to read status and history.</p></article>
+        <article class="reason reveal"><h3>Active CCB license</h3><p><a href="{CCB_URL}">Oregon CCB #232697, Active</a>. First licensed October 19, 2020.</p></article>
         <article class="reason reveal"><h3>BBB Accredited, A+</h3><p>The BBB profile shows accreditation since October 31, 2025 and an A+ rating. File opened November 3, 2025.</p></article>
         <article class="reason reveal"><h3>Two coastal counties</h3><p>The company website says it serves Lincoln County and Tillamook County. One Call Today lists the same territory.</p></article>
         <article class="reason reveal"><h3>Posted weekday hours</h3><p>Monday through Friday, 8:30 a.m. to 3:30 p.m. Saturday and Sunday are closed on the company site and the BBB profile.</p></article>
@@ -190,8 +190,7 @@ def core_pages():
       <p>The Better Business Bureau profile lists Faith A. Worthington as owner/manager and Michael E. Worthington as owner/member. It lists the business as a limited liability company, incorporated August 21, 2020, with a business start date of October 19, 2020. BBB accredited the business on October 31, 2025 and shows an A+ rating. The local bureau is BBB Great West and Pacific. The file was opened November 3, 2025.</p>
       <p>The same profile describes residential and commercial new construction and remodeling, including bathroom and kitchen work, new piping and re-piping, drain, toilet, and faucet service and repair, water heater installation, and pipe inspection and evaluation.</p>
       <h2>License</h2>
-      <p>The Oregon Construction Contractors Board lists PLUMBING 101 LLC, license 232697, status Active, first licensed October 19, 2020. Unpaid claims and unpaid civil penalties on that summary are $0.00. The summary also shows that complaints have been filed in the past 10 years, and that the license has had an administrative suspension for lack of proof of liability insurance. Current status on the summary is Active. Disciplinary history on that page is marked no. Read it yourself: <a href="{CCB_URL}">CCB license 232697</a>.</p>
-      <p>This website links the official record instead of turning license history into a slogan.</p>
+      <p><a href="{CCB_URL}">Oregon CCB #232697, Active</a>. First licensed October 19, 2020.</p>
       <h2>How to reach the company</h2>
       <p>Phone <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>. Email <a href="mailto:{EMAIL}">{EMAIL}</a>. The email address is printed on the company website. A street address is not printed here, because public listings disagree on the street direction and older registry mirrors list more than one past address.</p>
       <p>Existing website: <a href="{COMPANY_SITE}">plumbing101llc.com</a>. Directory listing: <a href="{ONECALL}">One Call Today</a>. BBB profile: <a href="{BBB_URL}">Plumbing 101 LLC</a>.</p>
@@ -277,7 +276,7 @@ def core_pages():
         ("What area do you serve?", "The company website says Lincoln County and Tillamook County. Public listings place the business in Lincoln City. Town pages on this site are communities inside those two counties."),
         ("How do I reach you?", f"Call {PHONE_DISP} or email {EMAIL}. The email address is printed on plumbing101llc.com. The contact form opens an email to that address."),
         ("What are the hours?", "Monday through Friday, 8:30 a.m. to 3:30 p.m. Saturday and Sunday are closed. That schedule is on the company website and the BBB profile. Some other listings show 4:00 p.m. Call if you need the day confirmed."),
-        ("Are you licensed?", "Oregon CCB license 232697 is listed Active, first licensed October 19, 2020. Read the official summary before you hire. It includes complaint history and administrative actions as well as current status."),
+        ("Are you licensed?", "Oregon CCB #232697, Active. First licensed October 19, 2020. The official record is linked in the footer."),
         ("Who is listed as the owner?", "The BBB profile lists Faith A. Worthington as owner/manager and Michael E. Worthington as owner/member."),
         ("What work is listed?", "The BBB profile lists residential and commercial plumbing, new construction, remodeling, bathroom and kitchen plumbing, new piping and re-piping, drain, toilet, and faucet service and repair, water heater installation, and pipe inspection and evaluation. The company site also names water heater installation."),
         ("Do you publish prices?", "No prices are published on the company website or on this site. Ask for an estimate and describe the house and the problem."),

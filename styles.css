@@ -271,7 +271,7 @@ a:hover { color: var(--navy); }
   50% { transform: translate3d(-30px, 24px, 0) scale(1.08); }
 }
 .why { background: var(--navy-deep); color: #fff; }
-.why .eyebrow, .why .lede { color: var(--gold-light); }
+.why .eyebrow, .why .lede, .why a { color: var(--gold-light); }
 .why .lede { color: #d5e6eb; }
 .reasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 24px; }
 .reason {

@@ -81,15 +81,15 @@ def load(A):
       "It will not list fees or counter hours. Those change. Call the building department for the official answer, and ask Plumbing 101, LLC how they handle paperwork on jobs they accept. New construction is where permits are routine.",
       "Keep the permit number with the estimate.",
       ["Ask if this job needs a permit.","Ask who applies.","Call the building department for the official rule.","File the number with the estimate."])
-    A("read-the-ccb","How to read CCB license 232697","Hiring","residential-plumbing",
-      "A plain reading of the public Oregon CCB summary for Plumbing 101, LLC.",
-      "The lines on the summary",
-      "The official summary lists PLUMBING 101 LLC, license 232697, status Active, first licensed October 19, 2020. Unpaid claims and unpaid civil penalties are shown at $0.00. The same summary says complaints have been filed in the past 10 years, and that there has been an administrative suspension for lack of proof of liability insurance. Disciplinary sanctions are marked no.",
-      "The board explains that an administrative insurance suspension is about proof of financial security, and that a license is reinstated when proof is received. Read current status first, and read the history too. One public complaint record was a 2023 owner claim on a small commercial remodel, closed as settled by telephone mediation.",
-      "Use the state page",
-      "Directory sites sometimes add bond amounts or star counts this website does not copy, because those figures conflict or were not on the official summary. Use search.ccb.state.or.us for license 232697.",
-      "The company phone is still (541) 614-1344. Hiring is your decision after you read the record.",
-      ["Read status first.","Read the complaint and suspension lines too.","Prefer the official CCB page.","Put the license number on your contract."])
+    A("read-the-ccb","How to confirm CCB license 232697","Hiring","residential-plumbing",
+      "Where to confirm that Plumbing 101, LLC holds Oregon CCB #232697, Active.",
+      "The license line",
+      "Oregon CCB #232697, Active. The official summary lists the business as PLUMBING 101 LLC and shows a first licensed date of October 19, 2020. That is the line to write on your own notes when you ask for an estimate.",
+      "The public search is on the Oregon Construction Contractors Board site. Search license 232697 and confirm the status still reads Active before a large job. The footer of this site links that record.",
+      "Put it on the paperwork",
+      "Ask for the license number on the written estimate. It should read 232697. Keep that paper with the permit, if the job has one.",
+      "The company phone is (541) 614-1344, Monday through Friday, 8:30 a.m. to 3:30 p.m. BBB Accredited, A+, is a separate public listing and is not a substitute for the CCB line.",
+      ["Confirm Oregon CCB #232697, Active.","Note the first licensed date, October 19, 2020.","Use the official CCB search.","Put the license number on the estimate."])
     A("who-is-listed","People named on the public profile","Hiring","residential-plumbing",
       "The names on the BBB profile, and the biographies this site does not invent.",
       "Two names",
@@ -252,7 +252,7 @@ def load(A):
       "If this is the only bath, ask how the household gets through the work. If the floor is already soft, the scope is bigger than a fixture swap. Say so at the start. If you already bought the valve, share the model.",
       "Have the parts chosen before the old tub comes out.",
       ["Ask if the valve will be replaced.","Clarify who waterproofs the pan.","Plan around a single bathroom.","Share the fixture model."])
-    A("scald","Scald complaints in baths","Fixtures","faucet-repair",
+    A("scald","Scald protection in baths","Fixtures","faucet-repair",
       "Heater setting and shower valves, especially with children or guests.",
       "Two devices",
       "The heater sets the hottest water in the pipes. The shower valve mixes it with cold. A very high heater setting can still scald through a working valve if someone turns it full hot. A failed balance cartridge can scald when a toilet flush drops the cold side. Both deserve a look if someone was nearly burned.",
@@ -339,7 +339,7 @@ def load(A):
       "Heater age and condition, active leaks, exposed galvanized pipe, toilet bases, hose bibs, and the main shutoff are a fair list. A drain camera is a separate scope if the disclosure mentions backups. Pipe inspection and evaluation is the service name on the BBB profile.",
       "Deadlines are often tighter than posted hours. This company is open until 3:30 p.m. on weekdays. A weekend open house does not create weekend plumbing hours.",
       "You are hiring someone",
-      "Check CCB 232697 on the state site, including the complaint line and the current status. This is not a full home inspection. A plumber looks at plumbing.",
+      "Confirm Oregon CCB #232697, Active, on the state site. This is not a full home inspection. A plumber looks at plumbing.",
       "Ask for the findings in writing.",
       ["List the heater, leaks, exposed pipe, and the shutoff.","Book inside weekday hours.","Add a camera only if backups are disclosed.","Read the CCB record."])
     A("shop-heater","Water heaters in a small business","Water heaters","commercial-plumbing",
