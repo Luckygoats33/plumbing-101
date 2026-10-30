@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Plumbing 101 mark">
+  <rect width="64" height="64" rx="14" fill="#063E48"/>
+  <path d="M8 44c6 6 12 6 18 0s12-6 18 0 12 6 14 4v8H8v-8c0 1 0 2 0-4z" fill="#0B7285" opacity=".9"/>
+  <path d="M8 48c6 5 12 5 18 0s12-5 18 0 12 5 14 3v8H8v-8z" fill="#E8913A" opacity=".95"/>
+  <path d="M32 8c-6 8-6 14 0 20 6-6 6-12 0-20z" fill="#F0A552"/>
+  <path d="M24 18h16v6H24z" fill="#F5F8FA"/>
+  <path d="M28 24h8v16h-8z" fill="#F5F8FA"/>
+  <circle cx="32" cy="44" r="4" fill="#063E48"/>
+</svg>

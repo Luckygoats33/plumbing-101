@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luckygoats33.github.io/plumbing-101/sitemap.xml
