@@ -118,7 +118,7 @@ def homepage():
     <div class="wrap trust-row">
       <div class="trust-item"><a href="{CCB_URL}"><strong>Oregon CCB #232697, Active</strong></a></div>
       <div class="trust-item"><strong>BBB</strong> Accredited, A+</div>
-      <div class="trust-item"><strong>Since 2020</strong> &middot; Lincoln &amp; Tillamook counties</div>
+      <div class="trust-item"><strong>Since 2020</strong>&nbsp;&middot;&nbsp;Lincoln &amp; Tillamook counties</div>
       <div class="trust-item"><strong>Weekdays</strong> 8:30 a.m. to 3:30 p.m.</div>
       <div class="trust-item"><strong>Lincoln City</strong> Oregon</div>
     </div>
