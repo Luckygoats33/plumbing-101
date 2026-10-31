@@ -89,7 +89,7 @@ h1, h2, h3, .brand-name, .btn, .eyebrow, .sign-route, .trust-item, .pill, .nav-d
 .btn-outline:hover, .btn-outline-dark:hover { background: var(--navy); color: #fff; }
 .nav-toggle, .nav-drawer, .nav-overlay { display: none; }
 .hero {
-  position: relative; min-height: 100svh; color: #fff;
+  position: relative; color: #fff;
   background: var(--navy-deep);
   overflow: hidden;
 }
@@ -103,9 +103,9 @@ h1, h2, h3, .brand-name, .btn, .eyebrow, .sign-route, .trust-item, .pill, .nav-d
 }
 .hero-grid {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: end;
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 32px; align-items: start;
   width: min(var(--max-w), calc(100% - 48px));
-  margin: 0 auto; min-height: 100svh; padding: 112px 0 120px;
+  margin: 0 auto; padding: 36px 0 72px;
 }
 .sign-route { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; }
 .sign-route .shield { width: 54px; height: 62px; }
@@ -325,12 +325,15 @@ textarea { min-height: 120px; }
   body { padding-bottom: 76px; }
   .wrap { width: min(var(--max-w), calc(100% - 32px)); }
   .section { padding: 64px 0; }
-  .hero { min-height: 100svh; }
-  .hero-photo { object-position: center 62%; }
-  .hero-shade { background: linear-gradient(180deg, rgba(18,26,61,.18) 0%, rgba(18,26,61,.35) 22%, rgba(18,26,61,.82) 48%, #121A3D 100%); }
-  .hero-grid { grid-template-columns: 1fr; min-height: 100svh; padding: 22vh 0 88px; align-items: end; }
-  .hero h1 { font-size: 2.15rem; }
-  .glass-card { margin-top: 8px; }
+  .hero-photo { object-position: center 58%; }
+  .hero-shade { background: linear-gradient(180deg, rgba(18,26,61,.55) 0%, rgba(18,26,61,.72) 42%, #121A3D 100%); }
+  .hero-grid { grid-template-columns: 1fr; padding: 28px 0 28px; align-items: start; }
+  .hero h1 { font-size: 2rem; margin-bottom: 8px; }
+  .hero-lead { font-size: 1rem; }
+  .hero-actions { margin-top: 14px; gap: 8px; }
+  .hero-actions .btn { min-height: 48px; }
+  .glass-card { display: none; }
+  .hero-waves .wave-art { height: 36px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn, .cta-band .btn { width: 100%; }
   .form-grid { grid-template-columns: 1fr; }

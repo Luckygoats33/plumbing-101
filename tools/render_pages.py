@@ -97,14 +97,12 @@ def homepage():
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="sign-route">{SHIELD}<span>Highway 101</span></p>
         <h1>Your Oregon Coast plumber, from Lincoln City to Tillamook</h1>
-        <p class="hero-lead">Depoe Bay, Newport, Waldport, Yachats, Pacific City, and Neskowin sit in the same two counties. Plumbing 101, LLC is based in Lincoln City.</p>
+        <p class="hero-lead">Licensed plumber serving Lincoln and Tillamook counties since 2020.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="tel:{PHONE_TEL}">Call {PHONE_DISP}</a>
           <a class="btn btn-outline" href="contact.html" data-open-estimate="Hero">Request an estimate</a>
         </div>
-        <p class="microline">Call now. Weekdays 8:30 a.m. to 3:30 p.m. Closed Saturday and Sunday.</p>
       </div>
       <aside class="glass-card">
         <p class="glass-label">Call the office</p>
@@ -205,7 +203,7 @@ def homepage():
     <div class="wrap">
       <p class="eyebrow">Highway 101</p>
       <h2>Lincoln County and Tillamook County</h2>
-      <p class="lede">These towns sit in the two counties the company says it serves. A town page is not a claim of a separate shop.</p>
+      <p class="lede">Depoe Bay, Newport, Waldport, Yachats, Pacific City, and Neskowin sit in Lincoln County or Tillamook County, the area Plumbing 101, LLC says it serves. A town page is not a separate shop.</p>
       <div class="route">
         <svg class="coast-map" viewBox="0 0 220 560" role="img" aria-label="Stylized coast with a route line through Tillamook, Pacific City, Neskowin, Lincoln City, Depoe Bay, Newport, Waldport, and Yachats">
           <path d="M70 20 C 120 70, 40 120, 90 180 C 140 240, 50 300, 100 370 C 150 440, 60 490, 110 540" fill="none" stroke="#1A5A68" stroke-width="10" stroke-linecap="round"/>
